@@ -120,11 +120,33 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		Student[] temp=new Student[this.students.length-1];
+		int c=0;
+		for(int i=0; i<this.students.length; i++)
+		{
+			temp[c++]=this.students[i];
+			if(i==index-1)
+			{
+				break;
+			}
+		}
+		this.students=temp;
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		Student[] temp=new Student[this.students.length-1];
+		int c=0;
+		for(int i=0; i<this.students.length; i++)
+		{
+			temp[c++]=this.students[i];
+			if(this.students[i]==student)
+			{
+				break;
+			}
+		}
+		this.students=temp;
 	}
 
 	@Override
