@@ -95,7 +95,7 @@ public class StudentGroup implements StudentArrayOperation {
 		int c=0;
 		for(int i=0; i<this.students.length; i++)
 		{
-			if(i!=index-1)
+			if(i!=index)
 			{
 				temp[c++]=this.students[i];
 			}
@@ -160,6 +160,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
+		
 		
 	}
 
