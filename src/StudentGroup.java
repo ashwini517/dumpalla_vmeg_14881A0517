@@ -95,7 +95,7 @@ public class StudentGroup implements StudentArrayOperation {
 		int c=0;
 		for(int i=0; i<this.students.length; i++)
 		{
-			if(i!=index)
+			if(i!=index-1)
 			{
 				temp[c++]=this.students[i];
 			}
