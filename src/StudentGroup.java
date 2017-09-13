@@ -38,12 +38,13 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		return null;
+		return students[index];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		this.students[index] = student;
 	}
 
 	@Override
@@ -121,15 +122,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
-		Student[] temp=new Student[this.students.length-1];
-		int c=0;
-		for(int i=0; i<this.students.length; i++)
+		Student[] temp = new Student[index]; 
+		for(int i=0; i<index; i++)
 		{
-			temp[c++]=this.students[i];
-			if(i==index-1)
-			{
-				break;
-			}
+			temp[i]=this.students[i];
+		
 		}
 		this.students=temp;
 	}
@@ -153,11 +150,17 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
+		Student[] temp = new Student[this.students.length-index]; 
+		 for(int i = index; i < this.students.length; i++)
+			 temp[i-index] = this.students[i];
+		 this.students = temp;
+		
 	}
 
 	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
+		
 	}
 
 	@Override
